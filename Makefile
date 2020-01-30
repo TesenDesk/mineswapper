@@ -43,6 +43,7 @@ else
 	FLAGS		:= $(CFLAGS)
 	DEBUGMSG	:= $(PREFIX)⚠️  \033[1;33mDebug mode $(RED)disabled.$(RST)\n
 endif
+MLX_FLAGS		:= -L./minilibx -lmlx  -framework OpenGL -framework AppKit
 
 #======================Rules===================================================#
 
@@ -55,7 +56,8 @@ debmsg:
 
 $(NAME): $(SRC) $(HEADER)
 		@printf "$(PREFIX)📦  Building $(NAME)...\n"
-		@gcc $(FLAGS) -o $(NAME) $(SRC) $(LIBFLAGS) -I$(HEADERDIR)
+#		@gcc $(FLAGS) -o $(NAME) $(SRC) $(LIBFLAGS) -I$(HEADERDIR)
+		@cc $(FLAGS) -o $(NAME) $(SRC) $(LIBFLAGS) $(MLX_FLAGS) -I$(HEADERDIR)
 
 liba:
 		@printf "$(PREFIX)$(BOLD)🔎  Checkig \
