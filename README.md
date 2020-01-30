@@ -9,8 +9,11 @@ Completed features:
 - [ ] Custom gamemode
 - [x] manual
 - [x] leaks-free
+
 Version: **1.1**
+
 Status: **Ready to play**
+
 
 Select 'console-version' branch to play.
 
@@ -18,4 +21,5 @@ Select 'console-version' branch to play.
 Uncomplete. Unplayeable.
 
 Version: **0.2**
+
 Status: **15% complete**
