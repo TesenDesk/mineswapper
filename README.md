@@ -1,7 +1,7 @@
 # mineswapper
 my mineswapper game
 
-##### Console version
+### Console version
 Completed features:
 - [x] Easy gamemode
 - [x] Medium gamemode
@@ -14,7 +14,7 @@ Status: **Ready to play**
 
 Select 'console-version' branch to play.
 
-##### Graphical version
+### Graphical version
 Uncomplete. Unplayeable.
 
 Version: **0.2**
