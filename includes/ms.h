@@ -49,6 +49,8 @@ typedef struct			s_drawing
 	int					h;
 }						t_drawing;
 
+typedef int (*t_func)(t_mlx *, t_drawing, void (*)(t_mlx *, t_drawing *));
+
 typedef enum			e_buttons
 {
 	ZOOM_X_PLUS = 92,

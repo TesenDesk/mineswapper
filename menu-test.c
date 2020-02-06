@@ -128,6 +128,177 @@ void draw_stick_horizontal(t_mlx *m, t_drawing d, int size,
 	draw(m, &d);
 }
 
+int		draw_a(t_mlx *m, t_drawing d,
+				  void (*draw)(t_mlx *, t_drawing *))
+{
+	d.x += d.w;
+	draw_stick_horizontal(m, d, 2, draw);
+	d.y += d.h * 3;
+	draw_stick_horizontal(m, d, 2, draw);
+	d.y -= d.h * 2;
+	d.x -= d.w;
+	draw_stick_vertical(m, d, 4, draw);
+	d.x += d.w * 3;
+	draw_stick_vertical(m, d, 4, draw);
+	return (5);
+}
+
+int		draw_b(t_mlx *m, t_drawing d,
+				  void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_vertical(m, d, 5, draw);
+	d.x += d.w;
+	draw_stick_horizontal(m, d, 2, draw);
+	d.y += d.h * 2;
+	draw_stick_horizontal(m, d, 2, draw);
+	d.y -= d.h;
+	d.x += d.w * 2;
+	draw(m, &d);
+	d.y += d.h * 2;
+	draw(m, &d);
+	d.x -= d.w * 2;
+	d.y += d.h;
+	draw_stick_horizontal(m, d, 2, draw);
+	return (5);
+}
+
+int		draw_c(t_mlx *m, t_drawing d,
+				  void (*draw)(t_mlx *, t_drawing *))
+{
+	d.x += d.w;
+	draw_stick_horizontal(m, d, 2, draw);
+	d.x -= d.w;
+	d.y += d.h;
+	draw_stick_vertical(m, d, 3, draw);
+	d.x += d.w;
+	d.y += d.h * 3;
+	draw_stick_horizontal(m, d, 2, draw);
+	return (4);
+}
+
+int		draw_d(t_mlx *m, t_drawing d,
+				  void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_vertical(m, d, 5, draw);
+	d.x += d.w;
+	draw_stick_horizontal(m, d, 2, draw);
+	d.x += d.w * 2;
+	d.y += d.h;
+	draw_stick_vertical(m, d, 3, draw);
+	d.x -= d.w * 2;
+	d.y += d.h * 3;
+	draw_stick_horizontal(m, d, 2, draw);
+	return (5);
+}
+
+int		draw_e(t_mlx *m, t_drawing d,
+				  void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_vertical(m, d, 5, draw);
+	d.x += d.w;
+	draw_stick_horizontal(m, d, 2, draw);
+	d.y += d.h * 2;
+	draw(m, &d);
+	d.y += d.h * 2;
+	draw_stick_horizontal(m, d, 2, draw);
+	return (4);
+}
+
+int		draw_f(t_mlx *m, t_drawing d,
+				  void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_vertical(m, d, 5, draw);
+	d.x += d.w;
+	draw_stick_horizontal(m, d, 2, draw);
+	d.y += d.h * 2;
+	draw(m, &d);
+	return (4);
+}
+
+int		draw_g(t_mlx *m, t_drawing d,
+				  void (*draw)(t_mlx *, t_drawing *))
+{
+	d.x += d.w;
+	draw_stick_horizontal(m, d, 2, draw);
+	d.x -= d.w;
+	d.y += d.h;
+	draw_stick_vertical(m, d, 3, draw);
+	d.x += d.w;
+	d.y += d.h * 3;
+	draw_stick_horizontal(m, d, 2, draw);
+	d.x += d.w;
+	d.y -= d.h;
+	draw(m, &d);
+	return (4);
+}
+
+int		draw_h(t_mlx *m, t_drawing d,
+				  void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_vertical(m, d, 5, draw);
+	d.x += d.w;
+	d.y += d.h * 2;
+	draw(m, &d);
+	d.x += d.w;
+	d.y -= d.h * 2;
+	draw_stick_vertical(m, d, 5, draw);
+	return (4);
+}
+
+int		draw_i(t_mlx *m, t_drawing d,
+				  void (*draw)(t_mlx *, t_drawing *))
+{
+	draw(m, &d);
+	d.x += d.w;
+	draw_stick_vertical(m, d, 5, draw);
+	d.x += d.w;
+	draw(m, &d);
+	d.y += d.h * 4;
+	draw(m, &d);
+	d.x -= d.w * 2;
+	draw(m, &d);
+	return (4);
+}
+
+int		draw_j(t_mlx *m, t_drawing d,
+				  void (*draw)(t_mlx *, t_drawing *))
+{
+	draw(m, &d);
+	d.x += d.w;
+	draw_stick_vertical(m, d, 4, draw);
+	d.x += d.w;
+	draw(m, &d);
+	d.y += d.h * 4;
+	d.x -= d.w * 2;
+	draw(m, &d);
+	return (4);
+}
+
+int		draw_k(t_mlx *m, t_drawing d,
+				  void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_vertical(m, d, 5, draw);
+	d.x += d.w;
+	d.y += d.h * 2;
+	draw(m, &d);
+	d.x += d.w;
+	d.y -= d.h * 2;
+	draw_stick_vertical(m, d, 2, draw);
+	d.y += d.h * 3;
+	draw_stick_vertical(m, d, 2, draw);
+	return (4);
+}
+
+int		draw_l(t_mlx *m, t_drawing d,
+				  void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_vertical(m, d, 5, draw);
+	d.y += d.h * 4;
+	d.x += d.w;
+	draw_stick_horizontal(m, d, 2, draw);
+	return (4);
+}
+
 int		draw_m(t_mlx *m, t_drawing d,
 				 void (*draw)(t_mlx *, t_drawing *))
 {
@@ -147,21 +318,6 @@ int		draw_m(t_mlx *m, t_drawing d,
 	return (6);
 }
 
-int		draw_i(t_mlx *m, t_drawing d,
-				  void (*draw)(t_mlx *, t_drawing *))
-{
-	draw(m, &d);
-	d.x += d.w;
-	draw_stick_vertical(m, d, 5, draw);
-	d.x += d.w;
-	draw(m, &d);
-	d.y += d.h * 4;
-	draw(m, &d);
-	d.x -= d.w * 2;
-	draw(m, &d);
-	return (4);
-}
-
 int		draw_n(t_mlx *m, t_drawing d,
 				  void (*draw)(t_mlx *, t_drawing *))
 {
@@ -178,17 +334,66 @@ int		draw_n(t_mlx *m, t_drawing d,
 	return (5);
 }
 
-int		draw_e(t_mlx *m, t_drawing d,
+int		draw_o(t_mlx *m, t_drawing d,
+				  void (*draw)(t_mlx *, t_drawing *))
+{
+	d.x += d.w;
+	draw_stick_horizontal(m, d, 2, draw);
+	d.x -= d.w;
+	d.y += d.h;
+	draw_stick_vertical(m, d, 3, draw);
+	d.x += d.w * 3;
+	draw_stick_vertical(m, d, 3, draw);
+	d.x -= d.w * 2;
+	d.y += d.h * 3;
+	draw_stick_horizontal(m, d, 2, draw);
+	return (5);
+}
+
+int		draw_p(t_mlx *m, t_drawing d,
 				  void (*draw)(t_mlx *, t_drawing *))
 {
 	draw_stick_vertical(m, d, 5, draw);
 	d.x += d.w;
 	draw_stick_horizontal(m, d, 2, draw);
 	d.y += d.h * 2;
-	draw(m, &d);
-	d.y += d.h * 2;
 	draw_stick_horizontal(m, d, 2, draw);
-	return (4);
+	d.y -= d.h;
+	d.x += d.w * 2;
+	draw(m, &d);
+	return (5);
+}
+
+int		draw_q(t_mlx *m, t_drawing d,
+				  void (*draw)(t_mlx *, t_drawing *))
+{
+	d.x += d.w;
+	draw_stick_horizontal(m, d, 2, draw);
+	d.x -= d.w;
+	d.y += d.h;
+	draw_stick_vertical(m, d, 3, draw);
+	d.x += d.w * 3;
+	draw_stick_vertical(m, d, 2, draw);
+	d.x -= d.w;
+	d.y += d.h * 2;
+	draw(m, &d);
+	d.y += d.h;
+	d.x -= d.w;
+	draw_stick_horizontal(m, d, 3, draw);
+	return (5);
+}
+
+int		draw_r(t_mlx *m, t_drawing d,
+				  void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_p(m, d, draw);
+	d.x += d.w * 2;
+	d.y += d.h * 3;
+	draw(m, &d);
+	d.y += d.h;
+	d.x += d.w;
+	draw(m, &d);
+	return (5);
 }
 
 int		draw_s(t_mlx *m, t_drawing d,
@@ -211,20 +416,40 @@ int		draw_s(t_mlx *m, t_drawing d,
 	return (5);
 }
 
-int		draw_o(t_mlx *m, t_drawing d,
+int		draw_t(t_mlx *m, t_drawing d,
 				  void (*draw)(t_mlx *, t_drawing *))
 {
-	d.x += d.w;
-	draw_stick_horizontal(m, d, 2, draw);
-	d.x -= d.w;
+	draw_stick_horizontal(m, d, 3, draw);
 	d.y += d.h;
-	draw_stick_vertical(m, d, 3, draw);
-	d.x += d.w * 3;
-	draw_stick_vertical(m, d, 3, draw);
-	d.x -= d.w * 2;
-	d.y += d.h * 3;
+	d.x += d.w;
+	draw_stick_vertical(m, d, 4, draw);
+	return (4);
+}
+
+int		draw_u(t_mlx *m, t_drawing d,
+				  void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_vertical(m, d, 4, draw);
+	d.x += d.w;
+	d.y += d.h * 4;
 	draw_stick_horizontal(m, d, 2, draw);
+	d.x += d.w * 2;
+	d.y -= d.h * 4;
+	draw_stick_vertical(m, d, 4, draw);
 	return (5);
+}
+
+int		draw_v(t_mlx *m, t_drawing d,
+				  void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_vertical(m, d, 4, draw);
+	d.x += d.w;
+	d.y += d.h * 4;
+	draw(m, &d);
+	d.x += d.w;
+	d.y -= d.h * 4;
+	draw_stick_vertical(m, d, 4, draw);
+	return (4);
 }
 
 int		draw_w(t_mlx *m, t_drawing d,
@@ -245,80 +470,6 @@ int		draw_w(t_mlx *m, t_drawing d,
 	return (6);
 }
 
-int		draw_a(t_mlx *m, t_drawing d,
-				  void (*draw)(t_mlx *, t_drawing *))
-{
-	d.x += d.w;
-	draw_stick_horizontal(m, d, 2, draw);
-	d.y += d.h * 3;
-	draw_stick_horizontal(m, d, 2, draw);
-	d.y -= d.h * 2;
-	d.x -= d.w;
-	draw_stick_vertical(m, d, 4, draw);
-	d.x += d.w * 3;
-	draw_stick_vertical(m, d, 4, draw);
-	return (5);
-}
-
-int		draw_p(t_mlx *m, t_drawing d,
-				  void (*draw)(t_mlx *, t_drawing *))
-{
-	draw_stick_vertical(m, d, 5, draw);
-	d.x += d.w;
-	draw_stick_horizontal(m, d, 2, draw);
-	d.y += d.h * 2;
-	draw_stick_horizontal(m, d, 2, draw);
-	d.y -= d.h;
-	d.x += d.w * 2;
-	draw(m, &d);
-	return (5);
-}
-
-int		draw_l(t_mlx *m, t_drawing d,
-				  void (*draw)(t_mlx *, t_drawing *))
-{
-	draw_stick_vertical(m, d, 5, draw);
-	d.y += d.h * 4;
-	d.x += d.w;
-	draw_stick_horizontal(m, d, 2, draw);
-	return (4);
-}
-
-int		draw_t(t_mlx *m, t_drawing d,
-				  void (*draw)(t_mlx *, t_drawing *))
-{
-	draw_stick_horizontal(m, d, 3, draw);
-	d.y += d.h;
-	d.x += d.w;
-	draw_stick_vertical(m, d, 4, draw);
-	return (4);
-}
-
-int		draw_r(t_mlx *m, t_drawing d,
-				  void (*draw)(t_mlx *, t_drawing *))
-{
-	draw_p(m, d, draw);
-	d.x += d.w * 2;
-	d.y += d.h * 3;
-	draw(m, &d);
-	d.y += d.h;
-	d.x += d.w;
-	draw(m, &d);
-	return (5);
-}
-
-int		draw_y(t_mlx *m, t_drawing d,
-				  void (*draw)(t_mlx *, t_drawing *))
-{
-	draw_stick_vertical(m, d, 2, draw);
-	d.x += d.w * 2;
-	draw_stick_vertical(m, d, 2, draw);
-	d.x -= d.w;
-	d.y += d.h * 2;
-	draw_stick_vertical(m, d, 3, draw);
-	return (4);
-}
-
 int		draw_x(t_mlx *m, t_drawing d,
 				  void (*draw)(t_mlx *, t_drawing *))
 {
@@ -336,7 +487,178 @@ int		draw_x(t_mlx *m, t_drawing d,
 	return (4);
 }
 
-void draw_less(t_mlx *m, t_drawing d,
+int		draw_y(t_mlx *m, t_drawing d,
+				  void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_vertical(m, d, 2, draw);
+	d.x += d.w * 2;
+	draw_stick_vertical(m, d, 2, draw);
+	d.x -= d.w;
+	d.y += d.h * 2;
+	draw_stick_vertical(m, d, 3, draw);
+	return (4);
+}
+
+int		draw_z(t_mlx *m, t_drawing d,
+				  void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_horizontal(m, d, 4, draw);
+	d.y += d.h * 4;
+	draw_stick_horizontal(m, d, 4, draw);
+	d.y -= d.h;
+	draw(m, &d);
+	d.y -= d.h;
+	d.x += d.w;
+	draw_stick_horizontal(m, d, 2, draw);
+	d.y -= d.h;
+	d.x += d.w * 2;
+	draw(m, &d);
+	return (5);
+}
+
+int		draw_zero(t_mlx *m, t_drawing d,
+				  void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_vertical(m, d, 5, draw);
+	d.x += d.w;
+	draw(m, &d);
+	d.x += d.w;
+	draw_stick_vertical(m, d, 5, draw);
+	d.y += d.h * 4;
+	d.x -= d.w;
+	draw(m, &d);
+	return (4);
+}
+
+int		draw_one(t_mlx *m, t_drawing d,
+					 void (*draw)(t_mlx *, t_drawing *))
+{
+	d.x += d.w;
+	draw_stick_vertical(m, d, 4, draw);
+	d.y += d.h;
+	d.x -= d.w;
+	draw(m, &d);
+	d.y += d.h * 3;
+	draw_stick_horizontal(m, d, 3, draw);
+	return (4);
+}
+
+int		draw_two(t_mlx *m, t_drawing d,
+					void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_horizontal(m, d, 3, draw);
+	d.x += d.w * 2;
+	d.y += d.h;
+	draw(m, &d);
+	d.y += d.h;
+	d.x -= d.w * 2;
+	draw_stick_horizontal(m, d, 3, draw);
+	d.y += d.h;
+	draw(m, &d);
+	d.y += d.h;
+	draw_stick_horizontal(m, d, 3, draw);
+	return (4);
+}
+
+int		draw_three(t_mlx *m, t_drawing d,
+					void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_horizontal(m, d, 3, draw);
+	d.x += d.w * 2;
+	draw_stick_vertical(m, d, 4, draw);
+	d.x -= d.w;
+	d.y += d.h * 2;
+	draw(m, &d);
+	d.y += d.h * 2;
+	d.x -= d.w;
+	draw_stick_horizontal(m, d, 3, draw);
+	return (4);
+}
+
+int		draw_four(t_mlx *m, t_drawing d,
+					  void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_vertical(m, d, 3, draw);
+	d.x += d.w;
+	d.y += d.h * 2;
+	draw(m, &d);
+	d.x += d.w;
+	d.y -= d.h * 2;
+	draw_stick_vertical(m, d, 5, draw);
+	return (4);
+}
+
+int		draw_five(t_mlx *m, t_drawing d,
+					  void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_horizontal(m, d, 3, draw);
+	d.y += d.h;
+	draw(m, &d);
+	d.y += d.h;
+	draw_stick_horizontal(m, d, 3, draw);
+	d.y += d.h * 2;
+	draw_stick_horizontal(m, d, 3, draw);
+	d.y -= d.h;
+	d.x += d.w * 2;
+	draw(m, &d);
+	return (4);
+}
+
+int		draw_six(t_mlx *m, t_drawing d,
+					 void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_vertical(m, d, 5, draw);
+	d.y += d.h * 2;
+	d.x += d.w;
+	draw_stick_horizontal(m, d, 2, draw);
+	d.y += d.h * 2;
+	draw_stick_horizontal(m, d, 2, draw);
+	d.y -= d.h;
+	d.x += d.w;
+	draw(m, &d);
+	return (4);
+}
+
+int		draw_seven(t_mlx *m, t_drawing d,
+					void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_horizontal(m, d, 3, draw);
+	d.y += d.h;
+	draw(m, &d);
+	d.x += d.w * 2;
+	draw_stick_vertical(m, d, 4, draw);
+	return (4);
+}
+
+int		draw_eight(t_mlx *m, t_drawing d,
+					  void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_vertical(m, d, 5, draw);
+	d.x += d.w * 2;
+	draw_stick_vertical(m, d, 5, draw);
+	d.x -= d.w;
+	draw(m, &d);
+	d.y += d.h * 2;
+	draw(m, &d);
+	d.y += d.h * 2;
+	draw(m, &d);
+	return (4);
+}
+
+int		draw_nine(t_mlx *m, t_drawing d,
+					  void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_vertical(m, d, 3, draw);
+	d.x += d.w * 2;
+	draw_stick_vertical(m, d, 5, draw);
+	d.x -= d.w;
+	draw(m, &d);
+	d.y += d.h * 2;
+	draw(m, &d);
+	return (4);
+}
+
+int		draw_less(t_mlx *m, t_drawing d,
 			   void (*draw)(t_mlx *, t_drawing *))
 {
 	d.x += d.w * 2;
@@ -353,9 +675,10 @@ void draw_less(t_mlx *m, t_drawing d,
 	d.x += d.w;
 	d.y += d.h;
 	draw(m, &d);
+	return (4);
 }
 
-void draw_more(t_mlx *m, t_drawing d,
+int draw_more(t_mlx *m, t_drawing d,
 			   void (*draw)(t_mlx *, t_drawing *))
 {
 	draw(m, &d);
@@ -371,6 +694,335 @@ void draw_more(t_mlx *m, t_drawing d,
 	d.x -= d.w;
 	d.y += d.h;
 	draw(m, &d);
+	return (4);
+}
+
+int draw_space(t_mlx *m, t_drawing d,
+			  void (*draw)(t_mlx *, t_drawing *))
+{
+	(void) m;
+	(void) d;
+	(void) draw;
+	return (4);
+}
+
+int		draw_ex_mark(t_mlx *m, t_drawing d,
+					 void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_vertical(m, d, 3, draw);
+	d.y += d.h * 4;
+	draw(m, &d);
+	return (2);
+}
+
+int		draw_quotes(t_mlx *m, t_drawing d,
+						void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_vertical(m, d, 2, draw);
+	d.x += d.w * 2;
+	draw_stick_vertical(m, d, 2, draw);
+	return (4);
+}
+
+int		draw_hash(t_mlx *m, t_drawing d,
+					  void (*draw)(t_mlx *, t_drawing *))
+{
+	d.x += d.w;
+	draw_stick_vertical(m, d, 5, draw);
+	d.x += d.w * 2;
+	draw_stick_vertical(m, d, 5, draw);
+	d.x -= d.w * 3;
+	d.y += d.h;
+	draw(m, &d);
+	d.x += d.w * 2;
+	draw(m, &d);
+	d.x += d.w * 2;
+	draw(m, &d);
+	d.x -= d.w * 4;
+	d.y += d.h * 2;
+	draw(m, &d);
+	d.x += d.w * 2;
+	draw(m, &d);
+	d.x += d.w * 2;
+	draw(m, &d);
+	return (6);
+}
+
+int		draw_dollar(t_mlx *m, t_drawing d,
+					 void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_horizontal(m, d, 4, draw);
+	d.y += d.h;
+	draw(m, &d);
+	d.x += d.w * 2;
+	draw(m ,&d);
+	d.x -= d.w * 2;
+	d.y += d.h;
+	draw_stick_horizontal(m, d, 4, draw);
+	d.y += d.h;
+	d.x += d.w;
+	draw(m ,&d);
+	d.x += d.w * 2;
+	draw(m ,&d);
+	d.x -= d.w * 3;
+	d.y += d.h;
+	draw_stick_horizontal(m, d, 4, draw);
+	d.y += d.h;
+	d.x += d.w;
+	draw(m ,&d);
+	d.y -= d.h * 6;
+	d.x += d.w;
+	draw(m ,&d);
+	return (5);
+}
+
+int		draw_procent(t_mlx *m, t_drawing d,
+					   void (*draw)(t_mlx *, t_drawing *))
+{
+	draw(m ,&d);
+	d.y += d.h * 4;
+	draw(m ,&d);
+	d.y -= d.h;
+	d.x += d.w;
+	draw(m ,&d);
+	d.y -= d.h;
+	d.x += d.w;
+	draw(m ,&d);
+	d.y -= d.h;
+	d.x += d.w;
+	draw(m ,&d);
+	d.y -= d.h;
+	d.x += d.w;
+	draw(m ,&d);
+	d.y += d.h * 4;
+	draw(m ,&d);
+	return (6);
+}
+
+int		draw_and(t_mlx *m, t_drawing d,
+						void (*draw)(t_mlx *, t_drawing *))
+{
+	d.x += d.w;
+	draw_stick_horizontal(m, d, 2, draw);
+	d.x -= d.w;
+	d.y += d.h;
+	draw(m ,&d);
+	d.y += d.h;
+	d.x += d.w;
+	draw(m ,&d);
+	d.y += d.h;
+	d.x -= d.w;
+	draw(m ,&d);
+	d.y += d.h;
+	d.x += d.w;
+	draw_stick_horizontal(m, d, 3, draw);
+	d.y -= d.h;
+	d.x += d.w;
+	draw_stick_horizontal(m, d, 2, draw);
+	d.y -= d.h;
+	d.x += d.w;
+	draw(m ,&d);
+	return (5);
+}
+
+int		draw_quote(t_mlx *m, t_drawing d,
+					   void (*draw)(t_mlx *, t_drawing *))
+{
+	draw_stick_vertical(m, d, 2, draw);
+	return (2);
+}
+
+int		draw_open_round_s(t_mlx *m, t_drawing d,
+					  void (*draw)(t_mlx *, t_drawing *))
+{
+	d.x += d.w;
+	draw(m, &d);
+	d.x -= d.w;
+	d.y += d.h;
+	draw_stick_vertical(m, d, 3, draw);
+	d.x += d.w;
+	d.y += d.h * 3;
+	draw(m, &d);
+	return (3);
+}
+
+int		draw_close_round_s(t_mlx *m, t_drawing d,
+							 void (*draw)(t_mlx *, t_drawing *))
+{
+	draw(m, &d);
+	d.x += d.w;
+	d.y += d.h;
+	draw_stick_vertical(m, d, 3, draw);
+	d.x -= d.w;
+	d.y += d.h * 3;
+	draw(m, &d);
+	return (3);
+}
+
+int		draw_star(t_mlx *m, t_drawing d,
+							  void (*draw)(t_mlx *, t_drawing *))
+{
+	draw(m, &d);
+	d.x += d.w * 2;
+	draw(m, &d);
+	d.x += d.w * 2;
+	draw(m, &d);
+	d.y += d.h;
+	d.x -= d.w * 3;
+	draw_stick_horizontal(m, d, 3, draw);
+	d.y += d.h;
+	d.x -= d.w;
+	draw_stick_horizontal(m, d, 5, draw);
+	d.y += d.h;
+	d.x += d.w;
+	draw_stick_horizontal(m, d, 3, draw);
+	d.y += d.h;
+	d.x -= d.w;
+	draw(m, &d);
+	d.x += d.w * 2;
+	draw(m, &d);
+	d.x += d.w * 2;
+	draw(m, &d);
+	return (6);
+}
+
+int		draw_plus(t_mlx *m, t_drawing d,
+					 void (*draw)(t_mlx *, t_drawing *))
+{
+	d.x += d.w;
+	d.y += d.h;
+	draw(m, &d);
+	d.x -= d.w;
+	d.y += d.h;
+	draw_stick_horizontal(m, d, 3, draw);
+	d.x += d.w;
+	d.y += d.h;
+	draw(m, &d);
+	return (4);
+}
+
+int		draw_comma(t_mlx *m, t_drawing d,
+					  void (*draw)(t_mlx *, t_drawing *))
+{
+	d.y += d.h * 4;
+	draw_stick_vertical(m, d, 2, draw);
+	return (2);
+}
+
+int		draw_minus(t_mlx *m, t_drawing d,
+					 void (*draw)(t_mlx *, t_drawing *))
+{
+	d.y += d.h * 2;
+	draw_stick_horizontal(m, d, 3, draw);
+	return (4);
+}
+
+int		draw_dot(t_mlx *m, t_drawing d,
+					  void (*draw)(t_mlx *, t_drawing *))
+{
+	d.y += d.h * 4;
+	draw(m, &d);
+	return (2);
+}
+
+int		draw_slash_right(t_mlx *m, t_drawing d,
+					void (*draw)(t_mlx *, t_drawing *))
+{
+	d.x += d.w * 2;
+	draw(m, &d);
+	d.y += d.h;
+	d.x -= d.w;
+	draw_stick_vertical(m, d, 3, draw);
+	d.x -= d.w;
+	d.y += d.h * 3;
+	draw(m, &d);
+	return (2);
+}
+
+void cast_symbols1(t_func *func_list)
+{
+	func_list[1] = draw_ex_mark;
+	func_list[2] = draw_quotes;
+	func_list[3] = draw_hash;
+	func_list[4] = draw_dollar;
+	func_list[5] = draw_procent;
+	func_list[6] = draw_and;
+	func_list[7] = draw_quote;
+	func_list[8] = draw_open_round_s;
+	func_list[9] = draw_close_round_s;
+	func_list[10] = draw_star;
+	func_list[11] = draw_plus;
+	func_list[12] = draw_comma;
+	func_list[13] = draw_minus;
+	func_list[14] = draw_dot;
+	func_list[15] = draw_slash_right;
+}
+
+void cast_numbers(t_func *func_list)
+{
+	func_list[55] = draw_x;
+	func_list[56] = draw_y;
+	func_list[57] = draw_z;
+	func_list[16] = draw_zero;
+	func_list[17] = draw_one;
+	func_list[18] = draw_two;
+	func_list[19] = draw_three;
+	func_list[20] = draw_four;
+	func_list[21] = draw_five;
+	func_list[22] = draw_six;
+	func_list[23] = draw_seven;
+	func_list[24] = draw_eight;
+	func_list[25] = draw_nine;
+	func_list[0] = draw_space;
+	cast_symbols1(func_list);
+}
+
+void cast_letters(t_func *func_list)
+{
+	func_list[32] = draw_a;
+	func_list[33] = draw_b;
+	func_list[34] = draw_c;
+	func_list[35] = draw_d;
+	func_list[36] = draw_e;
+	func_list[37] = draw_f;
+	func_list[38] = draw_g;
+	func_list[39] = draw_h;
+	func_list[40] = draw_i;
+	func_list[41] = draw_j;
+	func_list[42] = draw_k;
+	func_list[43] = draw_l;
+	func_list[44] = draw_m;
+	func_list[45] = draw_n;
+	func_list[46] = draw_o;
+	func_list[47] = draw_p;
+	func_list[48] = draw_q;
+	func_list[49] = draw_r;
+	func_list[50] = draw_s;
+	func_list[51] = draw_t;
+	func_list[52] = draw_u;
+	func_list[53] = draw_v;
+	func_list[54] = draw_w;
+	cast_numbers(func_list);
+}
+
+void draw_string_with_boxes(t_mlx *mlx, t_drawing d,
+							void (*draw)(t_mlx *, t_drawing *), const char *str)
+{
+	t_func			func_list[100];
+	int i;
+	int ch;
+
+	cast_letters(func_list);
+	i = -1;
+	while (str[++i])
+	{
+		ch = str[i];
+		if ((ch -= 32) > 64 && ch <= 90)
+			ch -= 33;
+		else if (ch > 90)
+			ch -= 27;
+		d.x += d.w * func_list[ch](mlx, d, draw);
+	}
 }
 
 void draw_ms_logo(t_mlx *m, int where, int size, int color)
@@ -382,17 +1034,7 @@ void draw_ms_logo(t_mlx *m, int where, int size, int color)
 	d.x = where % SCREEN_WIDTH;
 	d.w = size;
 	d.h = size;
-	d.x += d.w * draw_m(m, d, &draw_cross_box);
-	d.x += d.w * draw_i(m, d, &draw_cross_box);
-	d.x += d.w * draw_n(m, d, &draw_cross_box);
-	d.x += d.w * draw_e(m, d, &draw_cross_box);
-	d.x += d.w * draw_s(m, d, &draw_cross_box);
-	d.x += d.w * draw_w(m, d, &draw_cross_box);
-	d.x += d.w * draw_a(m, d, &draw_cross_box);
-	d.x += d.w * draw_p(m, d, &draw_cross_box);
-	d.x += d.w * draw_p(m, d, &draw_cross_box);
-	d.x += d.w * draw_e(m, d, &draw_cross_box);
-	draw_r(m, d, &draw_cross_box);
+	draw_string_with_boxes(m, d, &draw_cross_box, "mineswapper");
 }
 
 void draw_menu_par1(t_mlx *m, t_drawing d, int mode)
@@ -457,646 +1099,13 @@ void draw_menu(t_ms *ms, int where, int size, int color)
 	d.y = 900;
 	draw_menu_par3(&m, d, ms->selected_opt);
 	draw_menu_selectors(&m, d, ms->selected_opt);
+
+	d.x = 0;
+	d.y = 1000;
+	draw_string_with_boxes(&ms->mlx, d, &draw_filled_box, "0123456789 !\"#$%&'()*+-,./");
 }
 
 /*
-
-void old_draw_r(t_mlx *m, int x, int y, int color)
-{
-	t_drawing d;
-
-	d.x = x;
-	d.y = y;
-	d.w = 10;
-	d.h = 10;
-	d.color = color;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y = y;
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	d.x -= 10;
-	draw_filled_box(m, &d);
-	d.x -= 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	d.y += 10;
-	draw_filled_box(m, &d);
-}
-
-void old_draw_a(t_mlx *m, int x, int y, int color)
-{
-	t_drawing d;
-
-	d.x = x;
-	d.y = y + 10;
-	d.w = 10;
-	d.h = 10;
-	d.color = color;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y -= 10;
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x = x + 10;
-	d.y = y;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-}
-
-void draw_t(t_mlx *m, int x, int y, int color)
-{
-	t_drawing d;
-
-	d.x = x;
-	d.y = y;
-	d.w = 10;
-	d.h = 10;
-	d.color = color;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x -= 10;
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-}
-
-void old_draw_s(t_mlx *m, int x, int y, int color)
-{
-	t_drawing d;
-
-	d.x = x+10;
-	d.y = y;
-	d.w = 10;
-	d.h = 10;
-	d.color = color;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x = x;
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	d.x -= 10;
-	draw_filled_box(m, &d);
-	d.x -= 10;
-	draw_filled_box(m, &d);
-	d.x -= 10;
-	draw_filled_box(m, &d);
-}
-
-void draw_o(t_mlx *m, int x, int y, int color)
-{
-	t_drawing d;
-
-	d.x = x+10;
-	d.y = y;
-	d.w = 10;
-	d.h = 10;
-	d.color = color;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x = x;
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.y -= 10;
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.y -= 10;
-	draw_filled_box(m, &d);
-	d.y -= 10;
-	draw_filled_box(m, &d);
-}
-
-void olddraw_i(t_mlx *m, int x, int y, int color)
-{
-	t_drawing d;
-
-	d.x = x;
-	d.y = y;
-	d.w = 10;
-	d.h = 10;
-	d.color = color;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x -= 10;
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.x = x;
-	draw_filled_box(m, &d);
-	d.x = x + 20;
-	draw_filled_box(m, &d);
-}
-
-void draw_p(t_mlx *m, int x, int y, int color)
-{
-	t_drawing d;
-
-	d.x = x;
-	d.y = y;
-	d.w = 10;
-	d.h = 10;
-	d.color = color;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y = y;
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	d.x -= 10;
-	draw_filled_box(m, &d);
-	d.x -= 10;
-	draw_filled_box(m, &d);
-}
-
-void draw_n(t_mlx *m, int x, int y, int color)
-{
-	t_drawing d;
-
-	d.x = x;
-	d.y = y;
-	d.w = 10;
-	d.h = 10;
-	d.color = color;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	d.y = y + 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y = y;
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-}
-
-void draw_m(t_mlx *m, int x, int y, int color)
-{
-	t_drawing d;
-
-	d.x = x;
-	d.y = y;
-	d.w = 10;
-	d.h = 10;
-	d.color = color;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	d.y = y + 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	d.y -= 10;
-	draw_filled_box(m, &d);
-	d.y -= 10;
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-}
-
-void draw_e(t_mlx *m, int x, int y, int color)
-{
-	t_drawing d;
-
-	d.x = x;
-	d.y = y;
-	d.w = 10;
-	d.h = 10;
-	d.color = color;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.y = y + 20;
-	d.x = x + 10;
-	draw_filled_box(m, &d);
-	d.y = y;
-	d.x = x + 10;
-	draw_filled_box(m, &d);
-	d.x = x + 10;
-	draw_filled_box(m, &d);
-}
-
-void draw_f(t_mlx *m, int x, int y, int color)
-{
-	t_drawing d;
-
-	d.x = x;
-	d.y = y;
-	d.w = 10;
-	d.h = 10;
-	d.color = color;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y = y + 20;
-	d.x = x + 10;
-	draw_filled_box(m, &d);
-	d.y = y;
-	d.x = x + 10;
-	draw_filled_box(m, &d);
-	d.x = x + 20;
-	draw_filled_box(m, &d);
-}
-
-void draw_c(t_mlx *m, int x, int y, int color)
-{
-	t_drawing d;
-
-	d.x = x + 10;
-	d.y = y;
-	d.w = 10;
-	d.h = 10;
-	d.color = color;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x = x;
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-}
-
-void draw_u(t_mlx *m, int x, int y, int color)
-{
-	t_drawing d;
-
-	d.x = x;
-	d.y = y;
-	d.w = 10;
-	d.h = 10;
-	d.color = color;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.y -= 10;
-	draw_filled_box(m, &d);
-	d.y -= 10;
-	draw_filled_box(m, &d);
-	d.y -= 10;
-	draw_filled_box(m, &d);
-	d.y -= 10;
-	draw_filled_box(m, &d);
-}
-
-void draw_l(t_mlx *m, int x, int y, int color)
-{
-	t_drawing d;
-
-	d.x = x;
-	d.y = y;
-	d.w = 10;
-	d.h = 10;
-	d.color = color;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-}
-
-void draw_b(t_mlx *m, int x, int y, int color)
-{
-	t_drawing d;
-
-	d.x = x;
-	d.y = y;
-	d.w = 10;
-	d.h = 10;
-	d.color = color;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	d.y -= 10;
-	draw_filled_box(m, &d);
-	d.y -= 10;
-	d.x -= 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	d.y -= 10;
-	draw_filled_box(m, &d);
-	d.y -= 10;
-	d.x -= 10;
-	draw_filled_box(m, &d);
-}
-
-void draw_d(t_mlx *m, int x, int y, int color)
-{
-	t_drawing d;
-
-	d.x = x;
-	d.y = y;
-	d.w = 10;
-	d.h = 10;
-	d.color = color;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	d.y -= 10;
-	draw_filled_box(m, &d);
-	d.y -= 10;
-	draw_filled_box(m, &d);
-	d.y -= 10;
-	draw_filled_box(m, &d);
-	d.y -= 10;
-	d.x -= 10;
-	draw_filled_box(m, &d);
-}
-
-void draw_g(t_mlx *m, int x, int y, int color)
-{
-	t_drawing d;
-
-	d.x = x + 10;
-	d.y = y;
-	d.w = 10;
-	d.h = 10;
-	d.color = color;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x = x;
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	draw_filled_box(m, &d);
-	d.y -= 10;
-	draw_filled_box(m, &d);
-	d.y -= 10;
-	draw_filled_box(m, &d);
-}
-
-void draw_k(t_mlx *m, int x, int y, int color)
-{
-	t_drawing d;
-
-	d.x = x;
-	d.y = y;
-	d.w = 10;
-	d.h = 10;
-	d.color = color;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.x -= 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y = y;
-	d.x = x + 20;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 20;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-}
-
-void draw_y(t_mlx *m, int x, int y, int color)
-{
-	t_drawing d;
-
-	d.x = x;
-	d.y = y;
-	d.w = 10;
-	d.h = 10;
-	d.color = color;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.x += 20;
-	draw_filled_box(m, &d);
-	d.y -= 10;
-	draw_filled_box(m, &d);
-	d.x -= 10;
-	d.y += 20;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-}
-
-void draw_x(t_mlx *m, int x, int y, int color)
-{
-	t_drawing d;
-
-	d.x = x;
-	d.y = y;
-	d.w = 10;
-	d.h = 10;
-	d.color = color;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.x += 10;
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.x -= 10;
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y = y;
-	d.x = x + 20;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-	d.y += 20;
-	draw_filled_box(m, &d);
-	d.y += 10;
-	draw_filled_box(m, &d);
-}
 
 void	draw_fdf(t_mlx *m, int x, int y, int color)
 {
