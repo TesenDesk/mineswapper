@@ -1,30 +1,30 @@
 # mineswapper
 my mineswapper game
 
-### Console version
-Completed features:
-- [x] Easy gamemode
-- [x] Medium gamemode
-- [x] Hard gamemode
-- [ ] Custom gamemode
-- [x] manual
-- [x] leaks-free
+### Консольная версия
+На данный момент реализовано:
+- [x] Выбор сложности
+- [ ] Пользовательская сложность
+- [x] man-страница
+- [x] фикс утечек
 
-Version: **1.1**
+Версия: **1.1**
 
-Status: **Ready to play**
+Статус: **Готов к игре**
 
-Known bugs:
-- Debug mode is enabled sometimes for some reasons **[FIXED]**
-- Uncorrect opening around polaces **[FIXED]**
-- Uncorrect colors sometimes
-- Grammatical mistakes in manual
+Известные баги:
+- Иногда произвольно включается режим отладки **[ИСПРАВЛЕНО]**
+- Неправильное открытие полей **[ИСПРАВЛЕНО]**
+- Иногда отображаются неверные цвета
 
-Select 'console-version' branch to play.
+Переключитесь на ветку 'console-version' для запуска этой версии.    
+Выполните команду `make`, запустите игру командой `./ms <gamemode>`, для помощи выполните `./ms -h`
 
-### Graphical version
-Uncomplete. Unplayeable.
+### Графическая версия
+Пока не готова.
 
-Version: **0.2**
+Версия: **0.2**
 
-Status: **15% complete**
+Статус: **15% complete**
+
+2020 Moscow, Russia
