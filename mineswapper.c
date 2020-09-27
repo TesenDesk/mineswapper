@@ -3,7 +3,7 @@
 int		die(char *msg)
 {
 	ft_printf(msg);
-	return (0);
+	exit (0);
 }
 
 int		print_help_or_usage(int mode)
@@ -48,7 +48,7 @@ void	mines_generator(t_ms *ms)
 	i = 1;
 	while (i <= ms->mines_amount)
 	{
-		coords = (rand() % ms->size);
+		coords = rand() % ms->size;
 		if (ms->map[coords] == '*')
 			continue ;
 		ms->map[coords] = '*';
@@ -323,7 +323,11 @@ int			reader(t_ms *ms)
 	tmp = read(0, buff, BUFF_SIZE);
 	buff[tmp] = 0;
 	if (buff[i] == 'q' || buff[i] == 'Q')
+	{
+		ft_printf("{tcyan}Just leave? Ok, I show you all mines...{r}\n");
+		print_map(ms);
 		die("Exiting application...\n");
+	}
 	else if (buff[i] == 'f' || buff[i] == 'F')
 	{
 		++i;
